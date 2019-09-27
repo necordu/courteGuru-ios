@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CGAuthViewController" customModule="courtGuru" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auth_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="6cx-ik-J7t">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MB4-1k-rNe" userLabel="main_view">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_framed.png" translatesAutoresizingMaskIntoConstraints="NO" id="gM1-0h-s9N">
+                                        <rect key="frame" x="114.66666666666667" y="183.33333333333331" width="145.66666666666663" height="145.33333333333331"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gM1-0h-s9N" secondAttribute="height" multiplier="1:1" id="B8Z-LK-lIH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сourt Guru" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGv-cu-Vnw">
+                                        <rect key="frame" x="49" y="379.66666666666669" width="277" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consecte sd fsdf dsffds  sdf ds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XB-Ua-VSx">
+                                        <rect key="frame" x="49" y="451.66666666666669" width="277" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="V5J-O1-2Ar"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWY-hQ-pFA">
+                                        <rect key="frame" x="24" y="626" width="327" height="56"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="9uh-yU-DnN"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="16" minY="16" maxX="200" maxY="16"/>
+                                        <state key="normal" title="Войти через ВКонтакте" image="VK_Blue_Logo.png">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cronerRdius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="authVk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MhY-pA-aEF"/>
+                                            <segue destination="48K-Iq-945" kind="popoverPresentation" popoverAnchorView="pWY-hQ-pFA" id="Kc5-cS-eIE">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.27843137254901962" green="0.68235294117647061" blue="0.42352941176470588" alpha="0.8984910102739726" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="XGv-cu-Vnw" firstAttribute="centerX" secondItem="MB4-1k-rNe" secondAttribute="centerX" id="4EX-QL-dIo"/>
+                                    <constraint firstItem="3XB-Ua-VSx" firstAttribute="top" secondItem="XGv-cu-Vnw" secondAttribute="bottom" constant="24" id="D4w-3Z-Bq0"/>
+                                    <constraint firstItem="pWY-hQ-pFA" firstAttribute="centerX" secondItem="MB4-1k-rNe" secondAttribute="centerX" id="DDw-K6-3Mj"/>
+                                    <constraint firstItem="3XB-Ua-VSx" firstAttribute="leading" secondItem="XGv-cu-Vnw" secondAttribute="leading" id="Dl2-Ur-lR8"/>
+                                    <constraint firstItem="gM1-0h-s9N" firstAttribute="centerY" secondItem="MB4-1k-rNe" secondAttribute="centerY" constant="-150" id="GML-Un-6He"/>
+                                    <constraint firstAttribute="bottom" secondItem="pWY-hQ-pFA" secondAttribute="bottom" constant="130" id="L2l-Rr-3cG"/>
+                                    <constraint firstItem="3XB-Ua-VSx" firstAttribute="width" secondItem="XGv-cu-Vnw" secondAttribute="width" id="LTg-6G-hJE"/>
+                                    <constraint firstAttribute="trailing" secondItem="pWY-hQ-pFA" secondAttribute="trailing" constant="24" id="RNx-RX-MW7"/>
+                                    <constraint firstItem="XGv-cu-Vnw" firstAttribute="top" secondItem="gM1-0h-s9N" secondAttribute="bottom" constant="51" id="TA8-R5-ovD"/>
+                                    <constraint firstItem="3XB-Ua-VSx" firstAttribute="centerX" secondItem="MB4-1k-rNe" secondAttribute="centerX" id="VIc-EF-BH8"/>
+                                    <constraint firstItem="gM1-0h-s9N" firstAttribute="height" secondItem="MB4-1k-rNe" secondAttribute="height" multiplier="0.179" id="bFs-9p-gzH"/>
+                                    <constraint firstAttribute="trailing" secondItem="XGv-cu-Vnw" secondAttribute="trailing" constant="49" id="dx9-tt-yBj"/>
+                                    <constraint firstItem="pWY-hQ-pFA" firstAttribute="leading" secondItem="MB4-1k-rNe" secondAttribute="leading" constant="24" id="kju-8z-SWy"/>
+                                    <constraint firstItem="XGv-cu-Vnw" firstAttribute="leading" secondItem="MB4-1k-rNe" secondAttribute="leading" constant="49" id="pks-lf-p4r"/>
+                                    <constraint firstItem="gM1-0h-s9N" firstAttribute="centerX" secondItem="MB4-1k-rNe" secondAttribute="centerX" id="yv1-ec-bLY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6cx-ik-J7t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="01t-l3-IwD"/>
+                            <constraint firstItem="MB4-1k-rNe" firstAttribute="centerY" secondItem="6cx-ik-J7t" secondAttribute="centerY" id="1BD-X2-ijC"/>
+                            <constraint firstAttribute="top" secondItem="6cx-ik-J7t" secondAttribute="top" id="3JR-xA-Tfb"/>
+                            <constraint firstAttribute="trailing" secondItem="6cx-ik-J7t" secondAttribute="trailing" id="8bm-Ae-vlm"/>
+                            <constraint firstItem="MB4-1k-rNe" firstAttribute="leading" secondItem="6cx-ik-J7t" secondAttribute="leading" id="CCI-u0-Fgr"/>
+                            <constraint firstItem="MB4-1k-rNe" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Upb-es-QTS"/>
+                            <constraint firstItem="MB4-1k-rNe" firstAttribute="trailing" secondItem="6cx-ik-J7t" secondAttribute="trailing" id="VKa-zj-SbF"/>
+                            <constraint firstItem="MB4-1k-rNe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aie-IN-hbX"/>
+                            <constraint firstItem="6cx-ik-J7t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="l2M-Wv-Gkx"/>
+                            <constraint firstItem="6cx-ik-J7t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pqS-Go-Ksy"/>
+                            <constraint firstItem="6cx-ik-J7t" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wee-rI-NHI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="vkButton" destination="pWY-hQ-pFA" id="O08-CB-n7G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+        <!--Controller-->
+        <scene sceneID="a5y-gl-pZt">
+            <objects>
+                <viewController id="48K-Iq-945" customClass="CGVKController" customModule="courtGuru" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CpL-rc-Sq2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="DIG-iI-JqZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="l9K-76-8UG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kyp-6J-SOn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="841"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="VK_Blue_Logo.png" width="24" height="24"/>
+        <image name="auth_back.png" width="375" height="812"/>
+        <image name="logo_framed.png" width="129" height="132"/>
+    </resources>
+</document>

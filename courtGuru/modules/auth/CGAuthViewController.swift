@@ -7,20 +7,44 @@
 //
 
 import UIKit
+import Foundation
 
-class CGAuthViewController: UIViewController {
+class CGAuthViewController: UIViewController, vkAuth {
     @IBOutlet var vkButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        vkButton.layer.cornerRadius = 4
+        vkButton.layer.cornerRadius = 8
         // Do any additional setup after loading the view.
+        
+    }
+    @IBSegueAction func presentWeb(_ coder: NSCoder) -> CGVKController? {
+        
+        var storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        var vc : CGVKController = storyboard.instantiateViewController(withIdentifier: "vkAuth") as! CGVKController
+        vc.delegate = self
+        
+        return vc
     }
     
     @IBAction func authVk(_ sender: Any) {
         
+        let vc = CGVKController()
+        vc.delegate = self
         
+        self.present(vc, animated: true, completion: nil)
+        
+    }
+    
+    func pushForward(result: String) {
+        
+        if result == "Success" {
+            self.present(CGTabBar(), animated: true, completion: nil)
+        } else {
+            print(result)
+        }
         
     }
     

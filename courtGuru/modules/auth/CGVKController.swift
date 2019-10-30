@@ -8,10 +8,20 @@
 
 import UIKit
 import WebKit
+import Alamofire
+import RxSwift
+import RxCocoa
+
+protocol vkAuth {
+    
+    func pushForward(result: String)
+    
+}
 
 class CGVKController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     var webView: WKWebView!
+    var delegate: vkAuth?
     
     
     override func loadView() {
@@ -40,25 +50,40 @@ class CGVKController: UIViewController, WKUIDelegate, WKNavigationDelegate {
 
         
         if webView.url!.absoluteString.contains("code=") {
-        //    NSMutableDictionary *queryStringDictionary = [[NSMutableDictionary alloc] init];
-       //     NSArray *urlComponents = [urlString componentsSeparatedByString:@"&"];
-            
-            print(webView.url!.queryParameters["code"])
-            
-            
+            getToken(code: webView.url!.queryParameters["code"]!) { (result) in
+                switch result {
+                case .success(let auth):
+                    UserDefaults.standard.setValue(auth.token, forKey: "value: token")
+                    self.dismiss(animated: true) {
+                        self.delegate?.pushForward(result: "Success")
+                    }
+                case .failure(let error):
+                    self.dismiss(animated: true) {
+                        self.delegate?.pushForward(result: error.localizedDescription)
+                    }
+                }
+            }
             
         }
         decisionHandler(.allow)
 
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    func getToken(code: String, completion:@escaping (Result<Auth, AFError>) -> Void) {
+            
+        AF.request("http://demo133.bravo.vkhackathon.com:8000/api/auth/vkAuth?code=\(code)").responseDecodable { (response: DataResponse<Auth, AFError>) in
+            
+            completion(response.result)
+            /*switch response.result {
+            case .success(let auth):
+                complet
+            case .failure(let error):
+                return error
+            }*/
+        }
     }
-    */
-
+    
 }
+       
+

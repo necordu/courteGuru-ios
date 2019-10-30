@@ -23,3 +23,4 @@ class QueryParameters {
         return queryItems.first(where: { $0.name == name })?.value
     }
 }
+

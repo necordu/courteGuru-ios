@@ -8,6 +8,14 @@
 
 import UIKit
 
-class CGAuthObject: NSObject {
+extension Auth {
+    enum CodingKeys: String, CodingKey {
+        case token
+    }
 
+}
+    
+struct Auth: Codable {
+    let token: String
+    
 }

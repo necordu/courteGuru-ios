@@ -7,7 +7,15 @@
 //
 
 import Foundation
+import UIKit
+import RxCocoa
 
 protocol CGCartViewModelProtocol {
+    
+    var goods: BehaviorRelay<[CGCart]> { get }
+    
+    func cartChange(_ sender: UIButton, goodCount: Int) -> String
+    
+    func countPrice(price: Int, goodCount: String) -> String
     
 }

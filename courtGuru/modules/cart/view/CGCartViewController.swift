@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class CGCartViewController: UIViewController {
     
@@ -16,13 +18,14 @@ class CGCartViewController: UIViewController {
         }
     }
    
+    var disposeBag = DisposeBag()
     @IBOutlet var shopView: UIView!
+    @IBOutlet var cartTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.viewModel = CGCartViewModelIn()
-        // Do any additional setup after loading the view.
         
         
     }
@@ -35,8 +38,64 @@ class CGCartViewController: UIViewController {
         shopView.layer.shadowOffset = CGSize(width: 0.0, height: 0.5)//CGSizeMake(0.0f, 5.0f);
         shopView.layer.shadowOpacity = 0.2
         
+        self.configureTableView()
+        self.setupCellConfiguration()
+        
     }
     
+    /** Настройка таблицы - UI */
+    private func configureTableView() {
+
+        //Поведение ячейки при выборе
+        cartTable.rx
+            .modelSelected(CGCart.self)
+            .subscribe({ value in
+                
+                
+                
+            }).disposed(by: disposeBag)
+    }
+    
+    private func setupCellConfiguration() {
+        
+        viewModel!.goods.asObservable()
+            .bind(to: cartTable.rx
+                .items(cellIdentifier: CGCartCell.Identifier, cellType: CGCartCell.self)) {
+                    row, goods, cell in
+
+                    
+                    cell.goods = goods
+                    
+                    cell.plus.rx.tap
+                        .subscribe({ [weak self] _ in
+                            
+                            cell.goodsCount.text = self!.viewModel?.cartChange(cell.plus, goodCount: Int(cell.goodsCount!.text!)!)
+                            cell.priceLabel.text = (self!.viewModel?.countPrice(price: cell.goodPrice, goodCount: cell.goodsCount.text!))! + " " + cell.goodCurrency
+                            
+                        }).disposed(by: self.disposeBag)
+                    
+                    cell.minus.rx.tap
+                        .subscribe({ [weak self] _ in
+                        
+                            cell.goodsCount.text = self!.viewModel?.cartChange(cell.minus, goodCount: Int(cell.goodsCount!.text!)!)
+                            cell.priceLabel.text = (self!.viewModel?.countPrice(price: cell.goodPrice, goodCount: cell.goodsCount.text!))! + " " + cell.goodCurrency
+                        
+                    }).disposed(by: self.disposeBag)
+                    
+                  /*  cell.tasks = tasks
+                    
+                    cell.favoritesButton.rx.tap
+                        .subscribe(onNext: { [weak self] _ in
+                            
+                           _ = self!.viewModel?.addFavorite(cell.favoritesButton)
+                            
+                        }).disposed(by: self.disposeBag)*/
+                    
+            }
+            .disposed(by: disposeBag)
+        
+        
+    }
 
     /*
     // MARK: - Navigation

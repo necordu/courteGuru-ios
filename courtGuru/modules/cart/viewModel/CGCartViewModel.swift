@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RxCocoa
+import RxSwift
 
 protocol CGCartViewModelProtocol {
     
@@ -17,5 +18,7 @@ protocol CGCartViewModelProtocol {
     func cartChange(_ sender: UIButton, goodCount: Int) -> String
     
     func countPrice(price: Int, goodCount: String) -> String
+    
+    func getGoods() -> Observable<[CGCart]>
     
 }

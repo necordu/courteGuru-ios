@@ -8,54 +8,34 @@
 
 import UIKit
 
-class CGCart: NSObject {
-    
-   /* public enum Rarity {
-       case common
-       case uncommon
-       case rare
-       case veryRare
-     }
-     
-     public let name: String
-     public let birthday: Date
-     public let rarity: Rarity
-     public let image: UIImage
-     
-     public init(name: String,
-                 birthday: Date,
-                 rarity: Rarity,
-                 image: UIImage) {
-       self.name = name
-       self.birthday = birthday
-       self.rarity = rarity
-       self.image = image
-     }*/
-    
-    /*struct CartModel {
-        
-        let name: String
-        let price: NSNumber
-        let imageUrl: String
-        let goodsCount: NSNumber
-        
-    }*/
+extension CGCart {
+    enum CodingKeys: String, CodingKey {
+        case name
+        case imageUrl
+        case currency
+        case price
+        case goodCount
+    }
+
+}
+
+struct CGCart: Codable {
     
     public let name: String
-    public let price: NSNumber
+    public let price: Int
     public let imageUrl: String
-    public let goodsCount: NSNumber
+    public let goodCount: Int
     public let currency: String
     
     public init(name: String,
-                price: NSNumber,
+                price: Int,
                 imageUrl: String,
-                goodsCount: NSNumber,
+                goodsCount: Int,
                 currency: String) {
       self.name = name
       self.price = price
       self.imageUrl = imageUrl
-      self.goodsCount = goodsCount
+      self.goodCount = goodsCount
       self.currency = currency
     }
 

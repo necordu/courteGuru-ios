@@ -18,13 +18,13 @@ class CGCartCell: UITableViewCell {
         didSet{
             guard let good = goods else { return }
             
-            self.goodPrice = good.price.intValue
+            self.goodPrice = good.price
             self.goodCurrency = good.currency
             
             
             self.nameLabel.text = good.name
-            self.goodsCount.text = good.goodsCount.stringValue
-            self.priceLabel.text = String(good.price.intValue * good.goodsCount.intValue) + " " + good.currency
+            self.goodsCount.text = String(good.goodCount)
+            self.priceLabel.text = String(good.price * good.goodCount) + " " + good.currency
         }
     }
 

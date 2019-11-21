@@ -12,16 +12,10 @@ import Alamofire
 import RxSwift
 import RxCocoa
 
-protocol vkAuth {
-    
-    func pushForward(result: String)
-    
-}
-
 class CGVKController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     var webView: WKWebView!
-    var delegate: vkAuth?
+    weak var delegate: vkAuth?
     
     
     override func loadView() {

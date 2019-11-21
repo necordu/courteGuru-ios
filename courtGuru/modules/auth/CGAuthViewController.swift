@@ -9,6 +9,12 @@
 import UIKit
 import Foundation
 
+protocol vkAuth: class {
+    
+    func pushForward(result: String)
+    
+}
+
 class CGAuthViewController: UIViewController, vkAuth {
     @IBOutlet var vkButton: UIButton!
     

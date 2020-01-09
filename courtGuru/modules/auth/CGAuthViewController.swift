@@ -27,9 +27,9 @@ class CGAuthViewController: UIViewController, vkAuth {
     }
     @IBSegueAction func presentWeb(_ coder: NSCoder) -> CGVKController? {
         
-        var storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
-        var vc : CGVKController = storyboard.instantiateViewController(withIdentifier: "vkAuth") as! CGVKController
+        let vc : CGVKController = storyboard.instantiateViewController(withIdentifier: "vkAuth") as! CGVKController
         vc.delegate = self
         
         return vc

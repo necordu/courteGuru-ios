@@ -27,7 +27,7 @@ struct CGCart: Codable {
     public let goodCount: Int
     public let currency: String
     
-    public init(name: String,
+    init(name: String,
                 price: Int,
                 imageUrl: String,
                 goodsCount: Int,

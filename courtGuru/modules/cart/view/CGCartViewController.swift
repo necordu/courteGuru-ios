@@ -35,7 +35,7 @@ class CGCartViewController: UIViewController {
         shopView.layer.cornerRadius = 10
         shopView.layer.masksToBounds = false
         shopView.layer.shadowColor = UIColor.black.cgColor
-        shopView.layer.shadowOffset = CGSize(width: 0.0, height: 0.5)//CGSizeMake(0.0f, 5.0f);
+        shopView.layer.shadowOffset = CGSize(width: 0.0, height: 0.5)
         shopView.layer.shadowOpacity = 0.2
         
         viewModel!.getGoods()
@@ -43,7 +43,7 @@ class CGCartViewController: UIViewController {
             onNext: { [weak self] goods in
                 self!.viewModel!.goods.accept(goods)
             },
-            onError: { [weak self] error in
+            onError: { error in
                 print("error - \(error.localizedDescription)")
             }
         )

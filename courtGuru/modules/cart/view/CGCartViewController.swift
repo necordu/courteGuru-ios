@@ -74,7 +74,6 @@ class CGCartViewController: UIViewController {
                 .items(cellIdentifier: CGCartCell.Identifier, cellType: CGCartCell.self)) {
                     row, goods, cell in
 
-                    
                     cell.goods = goods
                     
                     cell.plus.rx.tap

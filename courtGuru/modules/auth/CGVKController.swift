@@ -31,10 +31,6 @@ class CGVKController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         let url = URL(string: "http://demo133.bravo.vkhackathon.com:8000/api/auth/getVkAuthUrl")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
-        /*let myURL = URL(string:"https://www.apple.com"/*"http://demo133.bravo.vkhackathon.com:8000/api/auth/getVkAuthUrl"*/)
-        let myRequest = URLRequest(url: myURL!)
-        webView.load(myRequest)*/
-        // Do any additional setup after loading the view.
     }
     
 

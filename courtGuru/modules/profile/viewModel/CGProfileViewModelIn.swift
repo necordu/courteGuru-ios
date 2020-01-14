@@ -7,7 +7,19 @@
 //
 
 import UIKit
+import RxCocoa
 
 class CGProfileViewModelIn: NSObject, CGProfileViewModelProtocol {
+    
+    var goods: BehaviorRelay<[CGCart]>  = BehaviorRelay<[CGCart]>(value: [])
+    
+    override init() {
+        
+        goods.accept(Utilities.createData())
+        
+    }
+    
+    
+    
 
 }

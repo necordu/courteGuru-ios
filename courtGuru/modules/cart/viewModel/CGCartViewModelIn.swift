@@ -50,6 +50,18 @@ class CGCartViewModelIn: NSObject, CGCartViewModelProtocol {
         
     }
     
+    
+    override init() {
+        
+        
+    }
+
+}
+
+
+//Request related with cart
+extension CGCartViewModelIn {
+    
     func getGoods() -> Observable<[CGCart]> {
         
         return Observable.create { (observer) -> Disposable in
@@ -84,9 +96,4 @@ class CGCartViewModelIn: NSObject, CGCartViewModelProtocol {
         
     }
     
-    override init() {
-        
-        
-    }
-
 }

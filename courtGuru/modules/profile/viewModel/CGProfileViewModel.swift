@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import RxCocoa
 
 protocol CGProfileViewModelProtocol {
+    
+    var goods: BehaviorRelay<[CGCart]> { get }
     
 }

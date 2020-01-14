@@ -19,7 +19,27 @@ final class Utilities {
         
         let t = CGCart(name: "Httr", price: 750, imageUrl: "", goodsCount: 1, currency: "Р")
         
-        return [f, s, t]
+        let t1 = CGCart(name: "Httr", price: 750, imageUrl: "", goodsCount: 1, currency: "Р")
+        
+        let t2 = CGCart(name: "Httr", price: 750, imageUrl: "", goodsCount: 1, currency: "Р")
+        
+        let t3 = CGCart(name: "Httr", price: 750, imageUrl: "", goodsCount: 1, currency: "Р")
+        
+        let t4 = CGCart(name: "Httr", price: 750, imageUrl: "", goodsCount: 1, currency: "Р")
+        
+        let t5 = CGCart(name: "Httr", price: 750, imageUrl: "", goodsCount: 1, currency: "Р")
+        
+        let t6 = CGCart(name: "Httr", price: 750, imageUrl: "", goodsCount: 1, currency: "Р")
+        
+        let t7 = CGCart(name: "Httr", price: 750, imageUrl: "", goodsCount: 1, currency: "Р")
+        
+        let t8 = CGCart(name: "Httr", price: 750, imageUrl: "", goodsCount: 1, currency: "Р")
+        
+        let t9 = CGCart(name: "Httr", price: 750, imageUrl: "", goodsCount: 1, currency: "Р")
+        
+        let t10 = CGCart(name: "Httr", price: 750, imageUrl: "", goodsCount: 1, currency: "Р")
+        
+        return [f, s, t, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10]
         
     }
    /* static func createData() -> [MRMainModel] {

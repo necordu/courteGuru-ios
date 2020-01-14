@@ -76,6 +76,7 @@ class CGProfileViewController: UIViewController {
             make.height.equalTo(16)
             
         }
+        //testxs
         titleLabel.font = UIFont.systemFont(ofSize: 14)
         
         historyCollection.snp.makeConstraints { (make) in

@@ -8,11 +8,17 @@
 
 import UIKit
 import SnapKit
+import RxSwift
 
 class CGCartCell: UITableViewCell {
     
     var goodPrice: Int!
     var goodCurrency: String!
+    var disposeBagCell:DisposeBag = DisposeBag()
+    
+    override func prepareForReuse() {
+        disposeBagCell = DisposeBag()
+    }
     
     var goods: CGCart? {
         didSet{

@@ -14,8 +14,8 @@
             filePath = "courtGuru/modules/profile/view/CGProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "draw(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "courtGuru/modules/profile/view/CGProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "draw(_:)"
             landmarkType = "7">
             <Locations>
@@ -78,8 +78,8 @@
             filePath = "courtGuru/modules/profile/view/CGProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "draw(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "courtGuru/modules/profile/view/CGProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "draw(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "courtGuru/modules/profile/view/CGProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "draw(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -119,7 +119,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3E3CA981-4947-4558-AABA-CDE8EE7CE533"
+            uuid = "D6A50C88-1E03-4C84-86F2-5ECBB35402A7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -135,17 +135,177 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D6A50C88-1E03-4C84-86F2-5ECBB35402A7"
+            uuid = "2F026236-F2FE-462A-BDB5-4A80AAEB4A47"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "courtGuru/modules/profile/view/CGProfileViewController.swift"
+            filePath = "courtGuru/modules/cart/view/CGCartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "setupCellConfiguration()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C83FD34-4DED-4754-B4E7-DB6139793516"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "courtGuru/modules/cart/view/CGCartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "setupCellConfiguration()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED477F2F-4D86-4FE7-9F3C-2FA98ADC743A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "courtGuru/modules/cart/view/CGCartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "setupCellConfiguration()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2CE209D-C2EF-46AE-B1CE-9AF42CF7EF56"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "courtGuru/modules/cart/view/CGCartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "setupCellConfiguration()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9AE2AF66-43B9-40FD-966B-9AC1BD7CCD4F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "courtGuru/modules/cart/view/CGCartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "setupCellConfiguration()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F27513BB-46B5-4817-82D8-CF58243CF68C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "courtGuru/modules/cart/view/CGCartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "setupCellConfiguration()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F27513BB-46B5-4817-82D8-CF58243CF68C - 9d4ecb74a5253114"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int, courtGuru.CGCart, courtGuru.CGCartCell) -&gt; () in courtGuru.CGCartViewController.(setupCellConfiguration in _83A4C65DD2EE8B630E59CD8D460F7FFC)() -&gt; ()"
+                  moduleName = "courtGuru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/greenatom/courteGuru-ios/courtGuru/modules/cart/view/CGCartViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "1376">
+               </Location>
+               <Location
+                  uuid = "F27513BB-46B5-4817-82D8-CF58243CF68C - 8bc28e3ac4a19681"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.Event&lt;()&gt;) -&gt; () in closure #1 (Swift.Int, courtGuru.CGCart, courtGuru.CGCartCell) -&gt; () in courtGuru.CGCartViewController.(setupCellConfiguration in _83A4C65DD2EE8B630E59CD8D460F7FFC)() -&gt; ()"
+                  moduleName = "courtGuru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/greenatom/courteGuru-ios/courtGuru/modules/cart/view/CGCartViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "4076">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0BB4D5D1-92A3-4144-B709-1C872CA858F8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "courtGuru/modules/cart/view/CGCartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "setupCellConfiguration()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0BB4D5D1-92A3-4144-B709-1C872CA858F8 - 9d4ecb74a5253114"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int, courtGuru.CGCart, courtGuru.CGCartCell) -&gt; () in courtGuru.CGCartViewController.(setupCellConfiguration in _83A4C65DD2EE8B630E59CD8D460F7FFC)() -&gt; ()"
+                  moduleName = "courtGuru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/greenatom/courteGuru-ios/courtGuru/modules/cart/view/CGCartViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "2210">
+               </Location>
+               <Location
+                  uuid = "0BB4D5D1-92A3-4144-B709-1C872CA858F8 - 9f9bff2936c8ec80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (RxSwift.Event&lt;()&gt;) -&gt; () in closure #1 (Swift.Int, courtGuru.CGCart, courtGuru.CGCartCell) -&gt; () in courtGuru.CGCartViewController.(setupCellConfiguration in _83A4C65DD2EE8B630E59CD8D460F7FFC)() -&gt; ()"
+                  moduleName = "courtGuru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/greenatom/courteGuru-ios/courtGuru/modules/cart/view/CGCartViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "4076">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

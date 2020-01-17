@@ -49,7 +49,7 @@ class CGCartViewController: UIViewController {
         )
         .disposed(by: disposeBag)
         
-        self.configureTableView()
+     //   self.configureTableView()
         self.setupCellConfiguration()
         
     }
@@ -79,33 +79,25 @@ class CGCartViewController: UIViewController {
                     cell.plus.rx.tap
                         .subscribe({ [weak self] _ in
                             
-                            cell.goodsCount.text = self!.viewModel?.cartChange(cell.plus, goodCount: Int(cell.goodsCount!.text!)!)
+                            cell.goodsCount.text = self!.viewModel?.cartChange(cell.plus, goodCount: Int(cell.goodsCount!.text!)!, index: row)
                             cell.priceLabel.text = (self!.viewModel?.countPrice(price: cell.goodPrice, goodCount: cell.goodsCount.text!))! + " " + cell.goodCurrency
                             
-                        }).disposed(by: self.disposeBag)
+                        }).disposed(by: cell.disposeBagCell)
                     
                     cell.minus.rx.tap
                         .subscribe({ [weak self] _ in
                         
-                            cell.goodsCount.text = self!.viewModel?.cartChange(cell.minus, goodCount: Int(cell.goodsCount!.text!)!)
+                            cell.goodsCount.text = self!.viewModel?.cartChange(cell.minus, goodCount: Int(cell.goodsCount!.text!)!, index: row)
                             cell.priceLabel.text = (self!.viewModel?.countPrice(price: cell.goodPrice, goodCount: cell.goodsCount.text!))! + " " + cell.goodCurrency
                         
-                    }).disposed(by: self.disposeBag)
-                    
-                  /*  cell.tasks = tasks
-                    
-                    cell.favoritesButton.rx.tap
-                        .subscribe(onNext: { [weak self] _ in
-                            
-                           _ = self!.viewModel?.addFavorite(cell.favoritesButton)
-                            
-                        }).disposed(by: self.disposeBag)*/
-                    
+                    }).disposed(by: cell.disposeBagCell)
+            
             }
             .disposed(by: disposeBag)
         
         
     }
+    
 
     /*
     // MARK: - Navigation

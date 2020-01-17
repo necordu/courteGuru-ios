@@ -20,12 +20,15 @@ class CGCartViewModelIn: NSObject, CGCartViewModelProtocol {
         case notFound = 404
     }
     
-    func cartChange(_ sender: UIButton, goodCount: Int) -> String {
+    func cartChange(_ sender: UIButton, goodCount: Int, index: Int) -> String {
         
         var goodCount = goodCount
         switch sender.tag {
         case 1:
             if goodCount == 1 {
+                var value = goods.value
+                value.remove(at: index)
+                goods.accept(value)
                 break
             } else {
                 goodCount = goodCount - 1
